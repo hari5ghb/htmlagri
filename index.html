@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <title>Image Slider</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f3f3f3;
+    }
+
+    .slider-container {
+      width: 100%;
+      overflow: hidden; /* Hide overflow images */
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+    }
+
+    .slider img {
+      width: 100%; /* Each image takes up the full container width */
+      height: 500px; /* Fixed height for images */
+      object-fit: cover; /* Fill the container and crop if necessary */
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .active-dot {
+      background-color: #717171; /* Active dot color */
+    }
+
+    /* Our Services Section Styling */
+    .services-section {
+      padding: 50px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .services-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .service {
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      padding: 20px;
+      width: 30%;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* Social Media Links */
+    .social-media {
+      margin-top: 10px;
+    }
+
+    .social-media a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .social-media a:hover {
+      color: #f1f1f1;
+    }
+  </style>
+  <!-- Include Font Awesome for social media icons -->
+ 
+</head>
+<body>
+
+  <h1 class="text-black text-center py-4">
+    Bzho Nexushub ( OPC ) private limited
+  </h1>
+
+  <section class="flex justify-center">
+    <div class="slider-container">
+      <div class="slider" id="slider">
+        <img src="./pics/p7.jpg" alt="Image 1"> <!-- First image shown initially -->
+        <img src="./pics/p8.jpeg" alt="Image 2">
+        <img src="./pics/p9.jpeg" alt="Image 3">
+        <img src="./pics/p10.jpg" alt="Image 4">
+        <img src="./pics/p11.jpg" alt="Image 5">
+      </div>
+    </div>
+  </section>
+
+  <!-- Dots for navigation -->
+  <div class="dots">
+    <span class="dot" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+    <span class="dot" data-index="4"></span>
+  </div>
+
+  <!-- Our Services Section -->
+  <section class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="service">
+        <h3>Web Development</h3>
+        <p>We create responsive, fast, and SEO-optimized websites that help businesses grow and thrive in the digital world.</p>
+      </div>
+      <div class="service">
+        <h3>Digital Marketing</h3>
+        <p>Our team delivers top-notch digital marketing strategies, including SEO, social media marketing, and PPC advertising.</p>
+      </div>
+      <div class="service">
+        <h3>Branding & Design</h3>
+        <p>We help you create a unique brand identity, from logos to comprehensive branding solutions that resonate with your target audience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+    <p>&copy; 2024 Bzho Nexushub (OPC) Private Limited. All rights reserved.</p>
+    <p>Phone: 9791299248</p>
+    <p>Email: <a href="mailto:bzhonexushub@gmail.com" style="color: #ffffff;">bzhonexushub@gmail.com</a></p>
+    <p>Address: 4/2, Thidal South Street, Mudukulathur, Ramanathapuram - 623704</p>
+  
+    <!-- Social Media Links -->
+    <div class="social-media" style="margin-top: 20px;">
+      <a href="https://wa.me/919791299248" target="_blank" title="WhatsApp" style="margin: 0 10px;">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bzhonexushub@gmail.com" title="Email" style="margin: 0 10px;">
+        <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email">
+      </a>
+      
+      <a href="https://www.instagram.com" target="_blank" title="Instagram" style="margin: 0 10px;">
+        <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com" target="_blank" title="Facebook" style="margin: 0 10px;">
+        <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">
+      </a>
+    </div>
+  </footer>
+  
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      let currentIndex = 0; // Initialize current index
+      const totalImages = $('.slider img').length; // Total number of images
+
+      // Handle dot click events
+      $('.dot').click(function() {
+        const index = $(this).data('index');
+        showImage(index);
+      });
+
+      function showImage(index) {
+        // Hide all images
+        $('.slider img').hide();
+        // Show the selected image
+        $('.slider img').eq(index).show();
+
+        // Update active dot
+        $('.dot').removeClass('active-dot');
+        $('.dot').eq(index).addClass('active-dot');
+      }
+
+      // Show the first image by default
+      showImage(currentIndex);
+
+      // Automatic image change every 2 seconds
+      setInterval(function() {
+        currentIndex = (currentIndex + 1) % totalImages; // Increment and loop back
+        showImage(currentIndex);
+      }, 2000); // Change every 2000 milliseconds (2 seconds)
+    });
+  </script>
+</body>
+</html>
