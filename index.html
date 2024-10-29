@@ -10,6 +10,7 @@
   <style>
     /* Reset default margin and padding */
     * {
+      overflow-x: hidden;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -117,6 +118,8 @@
       margin: 0 10px;
       text-decoration: none;
       font-size: 20px;
+      position: relative;
+      left: 10px;
     }
 
     .social-media a:hover {
@@ -242,6 +245,44 @@
         opacity: 0;
     }
 }
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  left: 100px;
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.contact-info p {
+  margin: 0;
+  padding: 10px 15px;
+  color: #ffffff; /* Text color */
+  font-weight: bold;
+}
+
+.contact-info a {
+  color: #00c4ff; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.number{
+  color: #00c4ff;
+  
+}
+.line {
+  border: 1px solid #ffffff; /* Line color */
+  height: 30px;
+  margin: 0 10px;
+  opacity: 0.8; /* Light opacity for softer effect */
+}
+
+
+
+
 
 @-webkit-keyframes falling3 {
      0% {
@@ -277,7 +318,7 @@
  
 </head>
 <body>
-<div>
+<div style="background-color: #000000;">
   <div id="leaves">
     <i></i>
     <i></i>
@@ -305,11 +346,11 @@
   <section class="flex justify-center">
     <div class="slider-container">
       <div class="slider" id="slider">
-        <img src="./pics/p7.jpg" alt="Image 1"> <!-- First image shown initially -->
-        <img src="./pics/p8.jpeg" alt="Image 2">
-        <img src="./pics/p9.jpeg" alt="Image 3">
-        <img src="./pics/p10.jpg" alt="Image 4">
-        <img src="./pics/p11.jpg" alt="Image 5">
+        <img src="./pics/n6.jpg" alt="Image 1"> <!-- First image shown initially -->
+        <img src="./pics/no1.jpg" alt="Image 2">
+        <img src="./pics/np2.jpg" alt="Image 3">
+        <img src="./pics//np3.jpg" alt="Image 4">
+        <img src="./pics/np5.webp" alt="Image 5">
       </div>
     </div>
   </section>
@@ -325,21 +366,29 @@
 
   <!-- Our Services Section -->
 <!-- Our Services Section -->
-<section class="services-section" style="padding: 50px 20px; background-color: #fff; text-align: center;">
+<!-- <section class="services-section" style="padding: 50px 20px; background-color: #fff; text-align: center;">
   <h1 style="font-size: 36px; margin-bottom: 20px; color: #333;">Site Under Construction</h1>
   <div class="construction-image">
     <img src="./pics/p01.jpeg" alt="Site Under Construction" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
   </div>
-</section>
+</section> -->
 
 
   <!-- Footer Section -->
-  <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+  <footer style="background-color: #000000; color: white; text-align: center; padding: 20px;">
     <p>&copy; 2024 Bzho Nexushub (OPC) Private Limited. All rights reserved.</p>
-    <p>Phone: 9791299248</p>
-    <p>Email: <a href="mailto:bzhonexushub@gmail.com" style="color: #ffffff;">bzhonexushub@gmail.com</a></p>
-    <p>Address: 4/2, Thidal South Street, Mudukulathur, Ramanathapuram - 623704</p>
-  
+    <div class="contact-info">
+      <p class="text-white font-semibold">
+        Phone: <span class="number">9791299248</span>
+      </p>
+      
+       <hr class="line">
+      <p>Email: <a href="mailto:bzhonexushub@gmail.com" class="text-white hover:text-red-500 transition-colors duration-300">bzhonexushub@gmail.com</a></p>
+<hr class="line">
+      <p>Address: 4/2, Thidal South Street, Mudukulathur, Ramanathapuram - 623704</p>
+    </div>
+    
+   
     <!-- Social Media Links -->
     <div class="social-media" style="margin-top: 20px;">
       <a href="https://wa.me/919791299248" target="_blank" title="WhatsApp" style="margin: 0 10px;">
