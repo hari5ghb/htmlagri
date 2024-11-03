@@ -17,17 +17,15 @@
       background-color: #f3f3f3;
       font-family: Arial, sans-serif;
     }
-    .number{
-      color:#4e9bff;
+    .number {
+      color: #4e9bff;
       font-size: 1.5rem;
       margin-right: 10px;
     }
     .slider-container {
       width: 100%;
-      position: fixed;
-      overflow: hidden;
       position: relative;
-      margin-top: 0px;
+      overflow: hidden;
       background-color: #000000;
     }
     .slider {
@@ -54,18 +52,67 @@
     .active-dot {
       background-color: #717171;
     }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000000;
+      color: white;
+      padding: 40px;
+      width: 100%;
+    }
+    .logo {
+      height:200px;
+      width:200px;
+      margin: 10px;
+      position:relative;
+      left: -180px;
+      top:-90px; 
+    }
     .styled-heading {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      color: #2c3e50;
       letter-spacing: 2px;
       text-transform: uppercase;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 700;
-      margin-top: 50px;
-   
+      margin: 0;
+      text-shadow: 0px 0px 10px #00ff00, 0px 0px 1px #30ec30;
+      cursor: pointer;
+    }
+    .email {
+      text-decoration: none;
+      font-size: 20px;
+      color: #4e9bff;
+    }
+    .number:hover, .email:hover {
+      color: #1302ff;
+    }
+    .mid {
+      width: 100%;
+      height: 500px;
+      margin-top: 100px;
+    }
+    .content {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .content h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .content p {
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
     }
     footer {
       background-color: #000000;
@@ -94,80 +141,12 @@
     .social-media a:hover {
       color: #f1f1f1;
     }
-  .header {
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  padding: 40px;
-  width: 100%;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.styled-heading {
-  position: relative;
-  bottom: 20px;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  align-content: center;
-  font-size: 3rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-  margin-top: 50px;
-  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-.styled-heading {
-
-  text-shadow: 0px 0px 10px #00ff00, 0px 0px 1px #30ec30; /* Glow effect */
-  cursor: pointer;
-}
-.email{
-  text-decoration: none;
-  font-size: 20px;
-  color:#4e9bff;
-}
-.number:hover , .email:hover{
-  color:#1302ff;
-}
-
-.mid{
-  width:100%;
-  height: 500px;
-  margin-top: 100px;
-}
-.content {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.content h2 {
-  color: #2c3e50;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.content p {
-  color: #555;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
   </style>
 </head>
 <body>
-  <div style="background-color: #000000;" class="header">
+  <div class="header">
+    <!-- Logo Image -->
+    <img src="./pics/logobgremove.png" alt="Logo" class="logo">
     <h1 class="styled-heading">Bzho Nexushub (OPC) Private Limited</h1>
   </div>
 
@@ -180,14 +159,6 @@
       <img src="./pics/np5.webp" alt="Image 5">
     </div>
   </div>
-<!-- 
-  <div class="dots">
-    <span class="dot" data-index="0"></span>
-    <span class="dot" data-index="1"></span>
-    <span class="dot" data-index="2"></span>
-    <span class="dot" data-index="3"></span>
-    <span class="dot" data-index="4"></span>
-  </div> -->
 
   <section class="mid">
     <div class="content">
@@ -221,24 +192,16 @@
     $(document).ready(function() {
       let currentIndex = 0;
       const images = $('#slider img');
-      const dots = $('.dot');
 
       function showImage(index) {
         images.hide();
         images.eq(index).fadeIn();
-        dots.removeClass('active-dot');
-        dots.eq(index).addClass('active-dot');
       }
 
       function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
         showImage(currentIndex);
       }
-
-      dots.click(function() {
-        currentIndex = $(this).data('index');
-        showImage(currentIndex);
-      });
 
       setInterval(nextImage, 3000);
       showImage(currentIndex);
